@@ -1,13 +1,13 @@
-const { ESLINT_MODES } = require("@craco/craco");
+const { ESLINT_MODES } = require('@craco/craco')
 
 module.exports = {
   babel: {
     plugins: [
       [
-        require.resolve("babel-plugin-module-resolver"),
+        require.resolve('babel-plugin-module-resolver'),
         {
           alias: {
-            "@": "./src",
+            '@': './src',
           },
         },
       ],
@@ -16,4 +16,4 @@ module.exports = {
   eslint: {
     mode: ESLINT_MODES.extends,
   },
-};
+}

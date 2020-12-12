@@ -1,0 +1,84 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "react-hooks"
+  ],
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "indent": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".ios.js",
+          ".android.js",
+          ".jsx"
+        ]
+      }
+    ],
+    "global-require": "off",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "import/prefer-default-export": "off",
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "prefer-promise-reject-errors": "off",
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [
+          "children",
+          "navigation",
+          "route",
+          "title"
+        ]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error", // Check rules of hooks
+    "react-hooks/exhaustive-deps": "warn" // Check effect dependencies
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        [
+          "@",
+          "./src"
+        ]
+      ],
+      "node": {
+        "extensions": [
+          ".js",
+          ".ios.js",
+          ".android.js",
+          ".jsx"
+        ]
+      }
+    }
+  }
+}
