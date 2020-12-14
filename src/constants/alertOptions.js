@@ -1,8 +1,8 @@
 import { positions, transitions } from 'react-alert'
 
 export default {
-  position: positions.TOP_CENTER,
+  position: positions.TOP_RIGHT,
   transition: transitions.FADE,
-  timeout: 3000,
+  timeout: 5000,
   offset: '20px',
 }
