@@ -25,7 +25,7 @@ function SignIn() {
       setLoading(true)
       await auth.signIn(form)
       history.replace({
-        pathname: '/session/',
+        pathname: '/auth/sign-out',
       })
       alert.success('Autenticado com sucesso.')
     } catch (e) {
