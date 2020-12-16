@@ -24,13 +24,13 @@ function SignIn() {
     try {
       setLoading(true)
       await auth.signIn(form)
-      history.replace({
-        pathname: '/auth/sign-out',
-      })
       alert.success('Autenticado com sucesso.')
+      history.replace({
+        pathname: '/sessions',
+      })
     } catch (e) {
       setLoading(false)
-      alert.error('Falha ao autenticar.')
+      alert.error('Falha ao autenticar, tente novamente.')
     }
   }, [alert, auth, history])
 

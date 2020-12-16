@@ -16,7 +16,7 @@ function Routes() {
           <Route path="/auth">
             <Auth />
           </Route>
-          <Route path="/session">
+          <Route path="/sessions">
             <Session />
           </Route>
         </Switch>

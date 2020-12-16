@@ -25,6 +25,7 @@ function SignUp() {
     try {
       setLoading(true)
       await auth.signUp(form)
+      alert.success('Conta criada com sucesso.')
       history.replace({
         pathname: '/auth/sign-in',
       })
