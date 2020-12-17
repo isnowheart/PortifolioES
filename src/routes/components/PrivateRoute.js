@@ -10,14 +10,16 @@ function PrivateRoute({ children, ...rest }) {
     <Route
       {...rest}
       render={({ location }) => (
-        auth.token ? children : (
-        <Redirect to={{
-        pathname: '/',
-          state: {
-            from: location,
-          },
-        }}
-        />
+        auth.token && auth.authenticated ? (
+          children
+        ) : (
+          <Redirect to={{
+            pathname: '/',
+              state: {
+                from: location,
+              },
+            }}
+          />
         )
       )}
     />

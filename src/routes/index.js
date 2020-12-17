@@ -3,6 +3,7 @@ import Session from '@/views/session'
 import React from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import Auth from './Auth'
+import PrivateRoute from './components/PrivateRoute'
 import ProvideAuth from './components/ProvideAuth'
 
 function Routes() {
@@ -16,9 +17,9 @@ function Routes() {
           <Route path="/auth">
             <Auth />
           </Route>
-          <Route path="/sessions">
+          <PrivateRoute path="/sessions">
             <Session />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </ProvideAuth>

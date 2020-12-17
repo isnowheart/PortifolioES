@@ -7,6 +7,9 @@ export default {
   signIn(body) {
     return api.post('/auth/sign-in', body)
   },
+  checkToken() {
+    return api.get('/auth/check-token')
+  },
   signOut() {
     return api.delete('/auth/sign-out')
   },
